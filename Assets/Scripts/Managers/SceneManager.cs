@@ -177,45 +177,6 @@ namespace Mio.TileMaster {
 					mainMenu.ResetToggleMainMenu (CurrentScene);
 
                 }
-
-                //bool isSet = false;
-                //for (int i = 0; i < sceneWithFullMenu.Length; i++) {
-                //    if (scene == sceneWithFullMenu[i]) {
-                //        mainMenu.SetMenuState(MainMenuState.ShowAll);
-                //        isSet = true;
-                //        break;
-                //    }
-                //}
-
-                //if (!isSet) {
-                //    for (int i = 0; i < sceneWithoutMenu.Length; i++) {
-                //        if (scene == sceneWithoutMenu[i]) {
-                //            mainMenu.SetMenuState(MainMenuState.HideAll);
-                //            isSet = true;
-                //            break;
-                //        }
-                //    }
-                //}
-
-                //if (!isSet) {
-                //    for (int i = 0; i < sceneWithTopMenu.Length; i++) {
-                //        if (scene == sceneWithTopMenu[i]) {
-                //            mainMenu.SetMenuState(MainMenuState.ShowTopBar);
-                //            isSet = true;
-                //            break;
-                //        }
-                //    }
-                //}
-
-                //if (!isSet) {
-                //    for (int i = 0; i < sceneWithBottomMenu.Length; i++) {
-                //        if (scene == sceneWithBottomMenu[i]) {
-                //            mainMenu.SetMenuState(MainMenuState.ShowBottomBar);
-                //            isSet = true;
-                //            break;
-                //        }
-                //    }
-                //}
             }
         }
 

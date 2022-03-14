@@ -135,8 +135,8 @@ namespace Mio.TileMaster {
         //the csv text of achievement record data
         private string rawAchievementDump, rawPropertyDump;
 
-        void Awake () {
-            //generate save, load path to reduce string generation
+        public void GetPathLocalConfig()
+        {
             storedataWritePath = FileUtilities.GetWritablePath(STORE_DATA_FILE);
             gameconfigWritePath = FileUtilities.GetWritablePath(GAME_CONFIG_FILE);
             gamestateWritePath = FileUtilities.GetWritablePath(GAME_STATE_DATA_FILE);
@@ -146,7 +146,12 @@ namespace Mio.TileMaster {
             achievementDataDumpWritePath = FileUtilities.GetWritablePath(ACHIEVEMENT_DATA_DUMP_FILE);
             achievementPropertiesWritePath = FileUtilities.GetWritablePath(ACHIEVEMENT_PROPERTY_DATA_FILE);
             achievementPropertiesDumpWritePath = FileUtilities.GetWritablePath(ACHIEVEMENT_PROPERTY_DATA_DUMP_FILE);
-
+        }
+        
+        void Awake () {
+            GetPathLocalConfig();
+            
+            //generate save, load path to reduce string generation
             Application.targetFrameRate = 60;
             Screen.sleepTimeout = (int)SleepTimeout.NeverSleep;
             //if (enableRemoteConsole) {

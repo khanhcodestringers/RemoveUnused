@@ -3,6 +3,7 @@ using Mio.Utils;
 using MovementEffects;
 using System.Collections.Generic;
 using Mio.Utils.MessageBus;
+using ProjectConstants;
 
 namespace Mio.TileMaster {
     //Hear it lay, the start of every thing
@@ -43,8 +44,9 @@ namespace Mio.TileMaster {
             DG.Tweening.DOTween.Init();
             MessageBus.Instance.Initialize();
             //splashScreen.OnLanguageConfirmed += OnLanguageConfirmed;
-            splashScreen.Initialize();
+            // splashScreen.Initialize();
 
+            GameManager.Instance.GetPathLocalConfig();
             GameManager.Instance.LoadLocalGameData();
             GameManager.Instance.SaveGameData();
             //Timing.Instance.TimeBetweenSlowUpdateCalls = 1;
@@ -60,6 +62,8 @@ namespace Mio.TileMaster {
 
         private void ShowLanguageConfirmation()
         {
+            return;
+            
             string systemLanguage = (Application.systemLanguage.ToString());
             for (int i = 0; i < SUPPORTED_LANGUAGES.Length; i++)
             {
@@ -179,7 +183,7 @@ namespace Mio.TileMaster {
                     }
                 }
 
-                splashScreen.UpdateLoadProgress(count * 1f / NUM_INITIALIZE_STEP);
+                //splashScreen.UpdateLoadProgress(count * 1f / NUM_INITIALIZE_STEP);
 
                 //if number of initialized step is equal to total step, meaning the game has been initialized, no need to wait any more
                 if (count == NUM_INITIALIZE_STEP)
@@ -202,7 +206,9 @@ namespace Mio.TileMaster {
                 yield return Timing.WaitForSeconds(0.2f);
             }
 
-            splashScreen.EnterGame();
+            // splashScreen.EnterGame();
+            SSSceneManager.Instance.LoadMenu(Scenes.MainMenu.GetName());
+            SceneManager.Instance.OpenScene(Scenes.HomeUI);
         }
 
         /// <summary>
@@ -228,6 +234,7 @@ namespace Mio.TileMaster {
 
         private void OnGameVersionRefreshFailed(string errorMessage)
         {
+            return;
             Debug.LogError("Error downloading game version data: " + errorMessage);
             splashScreen.ShowMessage(Localization.Get("er_download_version_failed"));
             splashScreen.ShowRetryButton();
@@ -255,6 +262,7 @@ namespace Mio.TileMaster {
         private void OnGameConfigRefreshFailed(string errorMessage)
         {
             Debug.LogError("Error downloading game config data " + errorMessage);
+            return;
             splashScreen.ShowMessage(Localization.Get("er_download_config_failed"));
             splashScreen.ShowRetryButton();
         }
@@ -288,6 +296,8 @@ namespace Mio.TileMaster {
         private void OnGameLocalizationDataRefreshFailed(string errorMessage)
         {
             Debug.LogError("Error downloading game localization data: " + errorMessage);
+            
+            return;
             splashScreen.ShowMessage(Localization.Get("er_download_localization_failed"));
             splashScreen.ShowRetryButton();
         }
@@ -306,6 +316,7 @@ namespace Mio.TileMaster {
 
         private void OnAchievementRefreshFailed(string obj)
         {
+            return;
             splashScreen.ShowMessage(Localization.Get("er_download_ach_failed"));
             splashScreen.ShowRetryButton();
         }
@@ -370,6 +381,7 @@ namespace Mio.TileMaster {
         private void OnStoreDataRefreshFailed(string errorMessage)
         {
             Debug.LogError("Error downloading store data " + errorMessage);
+            return;
             splashScreen.ShowMessage(Localization.Get("er_download_storedata_failed"));
             splashScreen.ShowRetryButton();
         }
