@@ -1,0 +1,70 @@
+ID,name,author,songURL,fileVersion,storeID,price,starsToUnlock,maxBPM,tickPerTile,speedModifier,speedPerStar,type
+1,We wish you a merry christmas,Folk Songs,http://45.77.248.145/TikTokNoWaterMark/public/Midi/navada.mid,0,christmas,15,101,200,216,1,,0
+2,Twinkle twinkle,Folk songs,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/twinkle.mid,5,twinkle,0,0,800,1024,1,,0
+3,Cat waltz,Various Artist,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/cat+waltz.mid,3,cat,0,0,400,60,1,,0
+4,Auld lang syne,Folk songs,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/AuldLangSyne.mid,1,auldlangsyne,15,5,300,236,1,,0
+5,Canon in d easy,Pachelbell,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/canon-easy.mid,6,cannonind,15,6,300,236,1,,0
+6,The beginning,Ryan Arcand,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/The+Beginning.mid,2,thebgn,30,-1,188,48,1.2,,0
+7,The spirit tree,Ori,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/The+Spirit+Tree.mid,5,spirit2,30,12,222,480,1,,0
+8,Canon in D,Pachelbell,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/canon.mid,3,cannonind2,15,17,180,119,1,,0
+9,The entertainer,Scott Joplin,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/The+Etertainer.mid,3,theetertainer,15,18,320,118,1,,0
+10,Katyusha,Matvei Blanter,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Katyusha+-+Matvei+Blanter.mid,3,katyu,15,23,320,239,1,,0
+11,River flows in you,Yiruma,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/riverflowsinyou.mid,8,riverflowsinyou,30,-1,270,108,1,,0
+12,Kiss the rain,Yiruma,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/kiss+the+rain+-+yiruma.mid,6,kiss,30,26,270,108,1,,0
+13,Minuet in G,Bach,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/minuet+in+G.mid,6,minuet,15,28,240,127,1,,1
+14,Howl's moving castle,Various Artist,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/howl+moving+castle.mid,6,howl,45,-1,240,40,1,,0
+15,Hungarian sonata,Richard Clayderman,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Hungarian+Sonata.mid,1,hunga,15,33,195,119,1,,0
+16,From the beginning until now,Ryu,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/From+The+beginning+until+now-ryu.mid,0,from,15,36,240,239,1,,0
+17,For Elise,Beethoven,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/for+elise.mid,3,forelise,15,38,225,119,1,,0
+18,Marriage d'amour,Richard Clayderman,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Marriage+Damour.mid,7,Marri,15,41,216,30,1,,0
+19,A comme amour,Richard Clayderman,https://s3.amazonaws.com/pianochallengetest/Song/A+Comme+Amour.mid,2,Acomme,15,43,136,118,1,,0
+20,Proud of you,Fiona Fung,https://s3.amazonaws.com/pianochallengetest/Song/Proud+of+you.mid,1,proud,15,46,300,356,1,,0
+21,Eyes on me,Faye Wong,https://s3.amazonaws.com/pianochallengetest/Song/Eyes+on+me.mid,1,eyes,60,-1,200,480,1,,0
+22,Castle in the sky,Laputa,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Castle+In+The+Sky.mid,5,laputa,15,51,192,240,1,,0
+23,Song from secret garden,Secret Garden,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Song+from+secret+garden.mid,3,songfr,15,53,126,237,1,,0
+24,Isn’t it beautiful (Suteki da ne),Rikki,https://s3.amazonaws.com/pianochallengetest/Song/Suteki+Dane.mid,4,suteki,15,56,124,240,1,,0
+25,Always with me,Spirited Away,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Always+with+me.mid,1,alway,15,58,180,90,1,,0
+26,A town with the ocean view,Kiki's Delivery Service,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/A+Town+With+The+Ocean+View.mid,1,kiki,15,61,186,512,1,,1
+27,One summer's day,Joe Hisaishi,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/One+Summer+Day.mid,4,onesum,45,-1,160,47,1,,0
+28,Alla turca (Turkish march),Wolfgang Amadeus Mozart,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Alla+turca.mid,2,Turca,15,66,270,120,1,,0
+29,Beautiful in white,Shane Filan,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/beautiful+in+white.mid,0,beauti,15,68,215,47,1,,0
+30,Wind of life,Joe Hisaishi,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Wind+Of+Life.mid,2,spring,15,71,400,238,1,,0
+31,Faded,Alan Walker,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/faded.mid,4,faded,40,73,210,239,1.2,,0
+32,Sundial dreams,Kelvin Kern,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Sundial+Dream.mid,0,sundial,15,76,300,216,1,,0
+33,I'm just a...,Doggy Poo,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Im+just+A....mid,0,doggy,15,78,300,216,1,,0
+34,Toccata,Paul Mauriat,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Toccata.mid,0,tocca,15,81,300,240,1,,0
+35,Mika's song,Yiruma,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Mika+Song.mid,2,mika,15,83,210,216,1,,0
+36,Sonata no. 16 in C major 1st movement,Mozart,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Sonata+No16+in+C+Major+1st+Movement.mid,1,cmajor,15,86,200,120,1,,0
+37,One call away,Charlie Purth,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/onecallaway.mid,3,ocacp,75,-1,225,116,1,,0
+38,I miss you,Kim Bum Soo,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/I+Miss+You.mid,7,imissyou,15,91,200,116,1,,0
+39,Happy birthday,Various Artist,https://s3.amazonaws.com/pianochallengetest/Song/happy+birthday.mid,7,happybirthday,15,93,240,500,1,,0
+40,The reluctant heroes,Sawano Hiroyuki,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/The+Reluctant+Heroes.mid,0,therh,15,96,252,239,1,,0
+41,Letter,Yiruma,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Letter.mid,1,letter,45,98,176,239,1,,0
+42,To Zanarkand,FFX,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/To+Zanarkand.mid,1,tozana,75,-1,480,1024,1,,1
+43,Prelude no.1 in C,Bach,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Prelude+in+C.mid,1,prelude,15,106,195,64,1,,0
+44,Can you feel the love tonight,Richard Clayderman,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Can+you+Feel+The+Love+Tonight.mid,1,cyftlt,15,108,198,108,1,,0
+45,Maybe,Yiruma,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Maybe.mid,1,maybeyi,15,111,828,216,1,,0
+46,Endless love,Jackie Chan ft Kim Hee Sun,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Endless+love.mid,0,endless,15,113,198,115,1,,0
+47,Super Mario theme,Nitendo,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Mario+theme.mid,1,mario,15,116,500,127,1,,0
+48,Eine kleine nachtmusik,Mozart,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Eine+Kleine.mid,0,eine,15,118,360,127,1,,0
+49,Fox rain,Lee Sun Hee,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Lee+Sun+Hee+-+Fox+rain+(made+by+wangmeiyeee).mid,5,foxrain,60,-1,207,108,1,,0
+50,Etude op.10 no.5 black key,Chopin,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Eude+op10+no5.mid,6,etude,15,123,240,54,1,,0
+51,Destiny,Full House Theme Song,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Full_House_-_Destiny.mid,5,destimyfull,15,126,312,480,1,,0
+52,Bluestone alley,Congfei Wei,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Congfei+Wei+-+Bluestone+Alley+.mid,9,Bluestone,75,-1,315,7680,1,,0
+53,Come back to me,Utada Hikaru,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Utada+Hikaru+-+Come+Back+To+Me.mid,5,comeback,15,131,228,108,1,,0
+54,If,TaeYeon,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/If.mid,2,iftae,15,133,216,108,1,,0
+55,Again,Shigatsu wa Kimi no Uso OST,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Again.mid,5,againshigatsu,15,136,285,240,1,,0
+56,Moonlight sonata,Beethoven,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Moonlight+sonata.midi,2,moonlight,15,138,162,127,1,,0
+57,Symphony no.5 1st movement,Beethoven,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Symphony+no5.mid,0,sympho,15,141,286,239,1,,0
+58,Autumn tale,Yiruma,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Autumn+tale.mid,0,autale,15,143,225,108,1,,0
+59,Invention 13 (bwv 784),Bach,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Invention+13.mid,0,inven,15,146,200,96,1,,0
+60,Pathetique 3rd movement - opus 13 no. 8,Beethoven,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Rondo+allegrovv.mid,0,patheti,15,148,360,239,1,,0
+61,Noctune op.9 no.2,Chopin,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Noctune+op9+no2.mid,0,op9no2,15,151,195,119,1,,0
+62,Bridal chorus from lohengrin,Wagner Wilhelm Richard,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/wagner-wilhelm-richard-bridal-chorus-from-lohengrin.midi,3,bridalchorus,15,153,480,48,1,,0
+63,My memories,Ryu,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/my+memory.mid,2,mymemp,60,-1,240,48,1,,2
+64,Story,AI,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Story.mid,2,story,15,158,252,47,1,,2
+65,Cold winter,July,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Coldwinter.mid,2,coldwin,15,161,210,24,1,,2
+66,Follow the wind,July,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Follow+the+wind.mid,2,fowin,15,163,240,240,1,,2
+67,In love,July,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/In+Love.mid,0,inlove,15,168,240,240,1,,2
+68,Moon Viewing Recital,IA,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Moon+Viewing+Recital.mid,0,moon,15,173,300,228,1,,0
+69,Flower Of Sorrow,Hanatan,https://s3-ap-southeast-1.amazonaws.com/pianochallenge/Song/Flower+of+sorrow.mid,0,fosoro,15,178,300,239,1,,0

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: dd8302c4b34c55448bb801815fd655d0
+timeCreated: 1465890109
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 3
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  fontNames:
+  - Proxima Nova Extra Condensed Regular
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6b98eef278439bc43a870b2953e6b374, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

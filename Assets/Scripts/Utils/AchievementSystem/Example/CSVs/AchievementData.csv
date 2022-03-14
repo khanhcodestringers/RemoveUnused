@@ -1,0 +1,4 @@
+ID,title,description,conditions,rewards,ishidden,isactive
+buy5song,Getting used to it,Buy 5 songs,"[[""songowned"",""="",5]]","[[50,""xp""]]",,x
+5star3song,EZ Game,Get 5 stars in 3 songs,"[[""song5star"",""="",3]]","[[1,""life""]]",,x
+1by1,1 hit 1 kill,Get 5 stars in 3 songs after 3 turns,"[[""song5star"",""="",3],[""songfinished"",""="",3]]","[[500,""note""]]",,x

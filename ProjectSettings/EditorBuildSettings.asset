@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Extensions/SSSystem/Scenes/SSEmpty.unity
+    guid: ef0246d6486ba4a62a69aec8c91a2af1
+  - enabled: 1
+    path: Assets/Scenes/AchievementListUI.unity
+    guid: 0d6e2d5b3f2f1454da72f626b717637a
+  - enabled: 1
+    path: Assets/Scenes/HomeUI.unity
+    guid: 6e97f7320c3878141a12cfdb8d17f0c5
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: a42949740c80024428df6ce43d85808d
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4ae41492ed073624cbbc50897e4442d0
+  - enabled: 1
+    path: Assets/Scenes/Popup/AdsPopup.unity
+    guid: c92208dc257ef33419702920a5fbdd53
+  - enabled: 1
+    path: Assets/Scenes/Popup/ChooseLanguagePopUp.unity
+    guid: e106f2250c592174987a16efd390cf39
+  - enabled: 1
+    path: Assets/Scenes/Popup/ContinuePopup.unity
+    guid: 7d30cf6bc56d10c4ab59f3c172b0d249
+  - enabled: 1
+    path: Assets/Scenes/Popup/DailyRewardPopUp.unity
+    guid: a14b6b367ac9aa44ca1c826112d33037
+  - enabled: 1
+    path: Assets/Scenes/Popup/FeedbackPopup.unity
+    guid: bf72494517d59e84283be53c0f420b9d
+  - enabled: 1
+    path: Assets/Scenes/Popup/IAP.unity
+    guid: d0b755e997c4eda49b58efa8cb62b178
+  - enabled: 1
+    path: Assets/Scenes/Popup/LivesPopup.unity
+    guid: 6f47aeb9869995349914dcbff80732e5
+  - enabled: 1
+    path: Assets/Scenes/Popup/Loading.unity
+    guid: 216074b112abaf64782fe216f9c7aa00
+  - enabled: 1
+    path: Assets/Scenes/Popup/MessageBoxPopup.unity
+    guid: 48385ead78d63cf40a62c4c449a628df
+  - enabled: 1
+    path: Assets/Scenes/Popup/RatePopUp.unity
+    guid: c82b572283f760b4d8b472cc0b8cdaad
+  - enabled: 1
+    path: Assets/Scenes/Popup/RemoveAdsPopUp.unity
+    guid: 18558817f0987e54bbf0ea2fccb5f1dd
+  - enabled: 1
+    path: Assets/Scenes/Popup/SongUnlockedPopup.unity
+    guid: dfef58ab94a306a4d816642779f7e152
+  - enabled: 1
+    path: Assets/Scenes/ResultUI.unity
+    guid: 282d26ef030bf474798b09fd530ae745
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ScenesManager.unity
+    guid: 5b6254c0ca3547f4bb24b0d4118fc35c
+  - enabled: 1
+    path: Assets/Scenes/SettingUI.unity
+    guid: 8f5eb77298effe94eaae814e43917f06
+  - enabled: 1
+    path: Assets/Scenes/SongList.unity
+    guid: b225e9417e0fc284bae0fe537cb8b0f9
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: f0fcd6ac79531a34bb4e0ab1e8b9d10e
+  m_configObjects: {}
