@@ -204,8 +204,5 @@ namespace Mio.Utils {
             ProfileHelper.Instance.CurrentLife = value;
         }
 
-        internal void SuggestRechargeLives() {
-            SceneManager.Instance.OpenPopup(ProjectConstants.Scenes.LivesPopup);
-        }
     }
 }

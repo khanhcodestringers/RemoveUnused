@@ -178,24 +178,6 @@ namespace Mio.TileMaster {
             
         }
 
-        private void OnVideoRewardEvent (Message msg) {
-            if(msg.data == null) {
-                Debug.LogWarning("Null data in video reward event, skip processing");
-                return;
-            }
-
-            SceneManager.Instance.SetLoadingVisible(false);
-
-            bool success = (bool)msg.data;
-            Debug.Log("Video reward view: " + success);
-            if (success) {
-                Debug.Log("============Video reward value: " + GameConfigs.videoAdsReward);
-                ProfileHelper.Instance.CurrentDiamond += GameConfigs.videoAdsReward;
-            }else {
-                
-            }
-        }
-
         private void OnGameDataChanged (Message obj) {
             SaveGameData();
         }

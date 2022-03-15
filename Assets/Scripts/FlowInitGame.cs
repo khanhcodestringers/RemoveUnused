@@ -16,7 +16,6 @@ public class FlowInitGame : MonoBehaviour
     public TileMasterGamePlay gamelogic;
     private LevelDataModel levelData;
 
-    public MainGameSceneController _MainGameSceneController;
     public int IndexSong = 0;
 
     protected void ChooseSong(int indexSong)

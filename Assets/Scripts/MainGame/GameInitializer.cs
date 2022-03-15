@@ -34,9 +34,7 @@ namespace Mio.TileMaster {
         }
         private const int NUM_INITIALIZE_STEP = 8;
         public readonly string[] SUPPORTED_LANGUAGES = { "English", "Japanese", "Vietnamese" };
-
-        public SplashScreenController splashScreen;
-
+        
         private bool[] gamestepInitialized;
 
         protected bool _IsInitializing = false;
@@ -230,7 +228,6 @@ namespace Mio.TileMaster {
         {
             Debug.LogError("Error downloading game config data " + errorMessage);
             return;
-            splashScreen.ShowMessage(Localization.Get("er_download_config_failed"));
         }
 
         IEnumerator<float> C_InitializeGameLocalization()
@@ -264,7 +261,6 @@ namespace Mio.TileMaster {
             Debug.LogError("Error downloading game localization data: " + errorMessage);
             
             return;
-            splashScreen.ShowMessage(Localization.Get("er_download_localization_failed"));
         }
         
         IEnumerator<float> C_InitializeUserData()
@@ -287,7 +283,6 @@ namespace Mio.TileMaster {
             else
             {
                 Debug.LogError("Error loading user data");
-                splashScreen.ShowMessage(Localization.Get("er_download_userdata_failed"));
             }
         }
         
@@ -317,9 +312,6 @@ namespace Mio.TileMaster {
 
         public void RetryLastInitialization()
         {
-            splashScreen.HideMessage();
-            splashScreen.HideRetryButton();
-
             Timing.RunCoroutine(C_InitializeGameSteps());            
         }
     }

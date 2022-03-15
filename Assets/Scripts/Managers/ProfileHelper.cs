@@ -88,8 +88,9 @@ namespace Mio.TileMaster {
                 yield return 0;
                 if (isUserDatachanged) {
                     //only proceed if user is not playing game or initializing game to prevent hiccup
-                    if (SceneManager.Instance.CurrentScene != ProjectConstants.Scenes.MainGame
-                        && SceneManager.Instance.CurrentScene != ProjectConstants.Scenes.SplashScreen) {
+                    // if (SceneManager.Instance.CurrentScene != ProjectConstants.Scenes.MainGame
+                    //     && SceneManager.Instance.CurrentScene != ProjectConstants.Scenes.SplashScreen) 
+                    {
                         //MessageBus.Annouce(MSG_USERDATA_CHANGED);
                         PushUserData(true);
                         isUserDatachanged = false;
@@ -321,7 +322,8 @@ namespace Mio.TileMaster {
                     rawUserData.diamond = value;
                     if (oldDiamond != value) {
                         //print("Saving user data after changing diamond");
-                        if (SceneManager.Instance.CurrentScene != ProjectConstants.Scenes.MainGame) {
+                        //if (SceneManager.Instance.CurrentScene != ProjectConstants.Scenes.MainGame) 
+                        {
                             SaveLocalUserData();
                         }
                         isUserDatachanged = true;
