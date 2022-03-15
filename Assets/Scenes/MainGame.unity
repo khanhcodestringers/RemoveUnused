@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776742192}
     m_Modifications:
+    - target: {fileID: 134744, guid: a75c630a9e739394490d7d5512c8593d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 445912, guid: a75c630a9e739394490d7d5512c8593d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -807,7 +811,7 @@ ParticleSystem:
         m_RotationOrder: 0
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -860,7 +864,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -6728,6 +6732,74 @@ MonoBehaviour:
   mAtlas: {fileID: 11495632, guid: a2cc20c724719294e8c973a4ed1ecb24, type: 3}
   mSpriteName: img_white_circle_shadow
   mFillCenter: 1
+--- !u!1 &695704130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695704132}
+  - component: {fileID: 695704131}
+  m_Layer: 0
+  m_Name: GamePlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &695704131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695704130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef224bac55faace40862b762e5c442ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileRenderCamera: {fileID: 1632104129}
+  noteStart: {fileID: 619884301}
+  normalTileHeightScreenRatio169: 480
+  tilesContainer: {fileID: 1031536559}
+  disableOnStart:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1324940446}
+  endlessLabel: {fileID: 1324940448}
+  recordviewStars: {fileID: 974623481}
+  recordviewCrowns: {fileID: 1394177108}
+  infoTile: {fileID: 1031536560}
+  lbScoreDisplay: {fileID: 1151602480}
+  anmScoreDisplay: {fileID: 1151602482}
+  bgAnimator: {fileID: 1465906535}
+  particleBubble: {fileID: 5902268}
+  particleSnow: {fileID: 1138356949}
+  tileMarkArray:
+  - {fileID: 453037278}
+  - {fileID: 1411229285}
+  tileLengthInUnit: 480
+  currentState: 0
+  btnStopAutoPlay: {fileID: 1414866255}
+  isListenThisSong: 0
+--- !u!4 &695704132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695704130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697599972
 GameObject:
   m_ObjectHideFlags: 0
@@ -7147,7 +7219,7 @@ ParticleSystem:
         m_RotationOrder: 0
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -7200,7 +7272,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -11602,7 +11674,6 @@ GameObject:
   m_Component:
   - component: {fileID: 808430263}
   - component: {fileID: 808430264}
-  - component: {fileID: 808430265}
   - component: {fileID: 808430266}
   m_Layer: 8
   m_Name: PanelLoadSong
@@ -11610,7 +11681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &808430263
 Transform:
   m_ObjectHideFlags: 0
@@ -11667,7 +11738,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3010
+  startingRenderQueue: 3002
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -11677,38 +11748,6 @@ MonoBehaviour:
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
---- !u!114 &808430265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808430262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26268c0b3d5629b43921ff44f879b680, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_levelData:
-    songData:
-      ID: 0
-      name: 
-      author: 
-      songURL: 
-      storeID: 
-      version: 0
-      pricePrimary: 0
-      starsToUnlock: 0
-      maxBPM: 0
-      tickPerTile: 0
-      speedModifier: 0
-      speedPerStar: []
-      type: 0
-    playbackData: []
-    noteData: []
-    BPM: 0
-    tickPerQuarterNote: 0
-    denominator: 0
 --- !u!54 &808430266
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11785,11 +11824,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 866489167}
-    mMethodName: OnHomeButtonClicked
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!65 &817086337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12180,69 +12215,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 866489170}
-  - component: {fileID: 866489169}
-  - component: {fileID: 866489168}
-  - component: {fileID: 866489167}
-  - component: {fileID: 866489171}
   m_Layer: 0
   m_Name: MainGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &866489167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866489166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a8ef8e72f06f4b4e8f5880f32f2fa4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldChangeCanvasOrder: 1
-  currentState: 0
-  levelLoader: {fileID: 808430265}
-  gamelogic: {fileID: 1776742193}
-  progressbar: {fileID: 1150403772}
-  lbMessage: {fileID: 1894912830}
-  backButton: {fileID: 817086336}
-  retryButton: {fileID: 930506687}
-  listToDisable:
-  - {fileID: 1703223469}
-  - {fileID: 237337207}
-  - {fileID: 897415857}
-  - {fileID: 885780510}
-  - {fileID: 5902265}
---- !u!114 &866489168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866489166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4cbb3dd0ecc947a1a09f12fe5f9a1a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Cameras: []
-  m_EventSystem: {fileID: 0}
---- !u!114 &866489169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866489166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d37f8d4339749b5ab816d76fc1f735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 1
 --- !u!4 &866489170
 Transform:
   m_ObjectHideFlags: 0
@@ -12258,53 +12237,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &866489171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866489166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftAnchor:
-    target: {fileID: 0}
-    relative: 0
-    absolute: 0
-  rightAnchor:
-    target: {fileID: 0}
-    relative: 1
-    absolute: 0
-  bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
-    absolute: 0
-  topAnchor:
-    target: {fileID: 0}
-    relative: 1
-    absolute: 0
-  updateAnchors: 1
-  showInPanelTool: 1
-  generateNormals: 0
-  widgetsAreStatic: 0
-  cullWhileDragging: 1
-  alwaysOnScreen: 0
-  anchorOffset: 0
-  softBorderPadding: 1
-  renderQueue: 0
-  startingRenderQueue: 3000
-  mClipTexture: {fileID: 0}
-  mAlpha: 1
-  mClipping: 0
-  mClipRange: {x: 0, y: 0, z: 300, w: 200}
-  mClipSoftness: {x: 4, y: 4}
-  mDepth: 0
-  mSortingOrder: 0
-  mSortingLayerName: 
-  mClipOffset: {x: 0, y: 0}
 --- !u!1 &885780510
 GameObject:
   m_ObjectHideFlags: 0
@@ -12476,6 +12408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776742192}
     m_Modifications:
+    - target: {fileID: 106804, guid: b02a17f28e3e1fa49a54a39dece72298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 138058, guid: b02a17f28e3e1fa49a54a39dece72298, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12849,11 +12785,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 866489167}
-    mMethodName: OnRetryButtonClicked
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!65 &930506688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13052,6 +12984,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceX: 1
+--- !u!1 &1066825586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066825588}
+  - component: {fileID: 1066825587}
+  m_Layer: 0
+  m_Name: LevelLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1066825587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066825586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26268c0b3d5629b43921ff44f879b680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_levelData:
+    songData:
+      ID: 0
+      name: 
+      author: 
+      songURL: 
+      storeID: 
+      version: 0
+      pricePrimary: 0
+      starsToUnlock: 0
+      maxBPM: 0
+      tickPerTile: 0
+      speedModifier: 0
+      speedPerStar: []
+      type: 0
+    playbackData: []
+    noteData: []
+    BPM: 0
+    tickPerQuarterNote: 0
+    denominator: 0
+--- !u!4 &1066825588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066825586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1098366636
 GameObject:
   m_ObjectHideFlags: 0
@@ -17934,17 +17929,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 435782, guid: c2a6ac6cb9ee87c4dbbc62549bdf0d8e, type: 3}
   m_PrefabInstance: {fileID: 817353830}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1150403772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11453128, guid: c2a6ac6cb9ee87c4dbbc62549bdf0d8e, type: 3}
-  m_PrefabInstance: {fileID: 817353830}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c20815eb3063c24290a61b7020a1836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1151602479
 GameObject:
   m_ObjectHideFlags: 0
@@ -18240,7 +18224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261639974
 GameObject:
@@ -18259,7 +18243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1261639975
 Transform:
   m_ObjectHideFlags: 0
@@ -18679,7 +18663,7 @@ Transform:
   - {fileID: 1760834138}
   - {fileID: 97022569}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338216454
 GameObject:
@@ -18906,7 +18890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1414866256
 Transform:
   m_ObjectHideFlags: 0
@@ -18949,11 +18933,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 1776742193}
-    mMethodName: StopAutoPlay
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &1414866258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19219,7 +19199,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _GameInitializer: {fileID: 1251457161}
   _GameManager: {fileID: 1338216456}
-  _MainGameSceneController: {fileID: 866489167}
+  _LevelLoader: {fileID: 1066825587}
+  gamelogic: {fileID: 695704131}
+  _MainGameSceneController: {fileID: 0}
   IndexSong: 0
 --- !u!4 &1454731163
 Transform:
@@ -19233,7 +19215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460621122
 GameObject:
@@ -20383,7 +20365,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1776742192}
   - component: {fileID: 1776742194}
-  - component: {fileID: 1776742193}
   - component: {fileID: 1776742195}
   m_Layer: 8
   m_Name: _GamePlayController
@@ -20412,43 +20393,6 @@ Transform:
   m_Father: {fileID: 1668498298}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1776742193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776742191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef224bac55faace40862b762e5c442ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRenderCamera: {fileID: 1632104129}
-  noteStart: {fileID: 619884301}
-  normalTileHeightScreenRatio169: 480
-  tilesContainer: {fileID: 1031536559}
-  disableOnStart:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1324940446}
-  endlessLabel: {fileID: 1324940448}
-  recordviewStars: {fileID: 974623481}
-  recordviewCrowns: {fileID: 1394177108}
-  infoTile: {fileID: 1031536560}
-  lbScoreDisplay: {fileID: 1151602480}
-  anmScoreDisplay: {fileID: 1151602482}
-  bgAnimator: {fileID: 1465906535}
-  particleBubble: {fileID: 5902268}
-  particleSnow: {fileID: 1138356949}
-  tileMarkArray:
-  - {fileID: 453037278}
-  - {fileID: 1411229285}
-  tileLengthInUnit: 480
-  currentState: 0
-  btnStopAutoPlay: {fileID: 1414866255}
-  isListenThisSong: 0
 --- !u!114 &1776742194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20486,7 +20430,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3006
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -20662,7 +20606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1794062815
 Transform:
   m_ObjectHideFlags: 0
