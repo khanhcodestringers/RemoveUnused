@@ -128,7 +128,7 @@ namespace Mio.TileMaster {
             int stepAchievement = (int)InitializeState.AchievementData;
             if (gamestepInitialized[stepAchievement] != true)
             {
-                Timing.RunCoroutine(C_InitializeAchievementData());
+                gamestepInitialized[stepAchievement] = true;
             }
 
             int stepUserData = (int)InitializeState.UserData;
@@ -200,14 +200,11 @@ namespace Mio.TileMaster {
         }
         IEnumerator<float> C_InitializeGameVersions()
         {
-            //print("Initializing version");
-            yield return Timing.WaitForSeconds(0.5f);
+            //yield return Timing.WaitForSeconds(0.5f);
+            yield return 0;
             GameManager.Instance.LoadLocalGameVersions();
-            //currentState = InitializeState.GameVersions;
-            //Debug.Log("Initializing game version...");
+            
             OnGameVersionsInitialized();
-            //yield return Timing.WaitForSeconds(0.25f);
-            //GameManager.Instance.RefreshGameVersionsData(OnGameVersionsInitialized, OnGameVersionRefreshFailed);
         }
 
         private void OnGameVersionsInitialized()
@@ -218,11 +215,8 @@ namespace Mio.TileMaster {
 
         IEnumerator<float> C_InitializeGameConfig()
         {
-            //load old game config first 
             GameManager.Instance.LoadGameConfigDataFromLocal();
-            //currentState = InitializeState.GameConfigs;
             yield return Timing.WaitForSeconds(0.25f);
-            //Debug.Log("Initializing game config...");
             OnGameConfigInitialized(false);
         }
 
@@ -237,7 +231,6 @@ namespace Mio.TileMaster {
             Debug.LogError("Error downloading game config data " + errorMessage);
             return;
             splashScreen.ShowMessage(Localization.Get("er_download_config_failed"));
-            splashScreen.ShowRetryButton();
         }
 
         IEnumerator<float> C_InitializeGameLocalization()
@@ -245,7 +238,7 @@ namespace Mio.TileMaster {
             //currentState = InitializeState.GameLocalization;
             //Debug.Log("Initializing game localization...");
             yield return Timing.WaitForSeconds(0.1f);
-            GameManager.Instance.RefreshLocalizationData(OnGameLocalizationDataInitialized, OnGameLocalizationDataRefreshFailed);
+            
         }
 
         private void OnGameLocalizationDataInitialized()
@@ -272,33 +265,8 @@ namespace Mio.TileMaster {
             
             return;
             splashScreen.ShowMessage(Localization.Get("er_download_localization_failed"));
-            splashScreen.ShowRetryButton();
         }
-
-        IEnumerator<float> C_InitializeAchievementData()
-        {
-            //yield return Timing.WaitForSeconds(0.5f);
-            //Debug.Log("Initializing achievement data");
-            GameManager.Instance.LoadLocalAchievementData();
-            //currentState = InitializeState.AchievementData;
-            yield return Timing.WaitForSeconds(0.25f);
-            //Debug.Log("Initializing Achievement data...");
-            //            LivesManager.Instance.Initialize();
-            GameManager.Instance.RefreshAchievementData(OnAchivementInitialized, OnAchievementRefreshFailed);
-        }
-
-        private void OnAchievementRefreshFailed(string obj)
-        {
-            return;
-            splashScreen.ShowMessage(Localization.Get("er_download_ach_failed"));
-            splashScreen.ShowRetryButton();
-        }
-
-        private void OnAchivementInitialized()
-        {
-            gamestepInitialized[(int)InitializeState.AchievementData] = true;
-        }
-
+        
         IEnumerator<float> C_InitializeUserData()
         {
             ProfileHelper.Instance.Initialize();
@@ -320,7 +288,6 @@ namespace Mio.TileMaster {
             {
                 Debug.LogError("Error loading user data");
                 splashScreen.ShowMessage(Localization.Get("er_download_userdata_failed"));
-                splashScreen.ShowRetryButton();
             }
         }
         

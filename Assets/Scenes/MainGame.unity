@@ -18240,7 +18240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261639974
 GameObject:
@@ -18656,7 +18656,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1330231806}
-  - component: {fileID: 1330231807}
   m_Layer: 0
   m_Name: _Managers
   m_TagString: Untagged
@@ -18680,16 +18679,8 @@ Transform:
   - {fileID: 1760834138}
   - {fileID: 97022569}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1330231807
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330231803}
-  m_Enabled: 1
 --- !u!1 &1338216454
 GameObject:
   m_ObjectHideFlags: 0
@@ -18739,7 +18730,6 @@ MonoBehaviour:
   japaneseFont: {fileID: 0}
   koreanFont: {fileID: 0}
   configURL: https://s3.amazonaws.com/pianochallenge2/pc201/PC_Config_Nov1.txt
-  gameVersionURL: https://s3.amazonaws.com/pianochallenge2/pc201/PC_Version_Nov1.txt
 --- !u!1 &1344514269
 GameObject:
   m_ObjectHideFlags: 0
@@ -19243,7 +19233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1460621122
 GameObject:

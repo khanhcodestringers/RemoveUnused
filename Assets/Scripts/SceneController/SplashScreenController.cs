@@ -34,8 +34,6 @@ namespace Mio.TileMaster {
         [SerializeField]
         private TweenAlpha languageOptionTween;
 
-        public Action OnLanguageConfirmed;
-
         private Dictionary<string, UIToggle> listToggles;
 
         public override void OnEnableFS() {
@@ -48,15 +46,7 @@ namespace Mio.TileMaster {
             lbMessage.cachedGameObject.SetActive(false);
             retryButton.cachedGameObject.SetActive(false);
             loadingAnimation.gameObject.SetActive(false);
-            
 
-            //var toggles = gameObject.GetComponentsInChildren<UIToggle>();
-            //if(toggles != null) {
-            //    listToggles = new Dictionary<string, UIToggle>(10);
-            //    for(int i = 0; i < toggles.Length; i++) {
-            //        listToggles.Add(toggles[i].gameObject.name.Substring(6), toggles[i]);
-            //    }
-            //}
 
             languageContainer.gameObject.SetActive(false);
             loadingContainer.gameObject.SetActive(false);
@@ -98,34 +88,6 @@ namespace Mio.TileMaster {
             languageOptionTween.PlayReverse();
         }
 
-        public void OnLanguageChanged () {
-            if (UIToggle.current.value) {
-                string language = UIToggle.current.gameObject.name.Substring(6);
-                //Debug.Log(language);
-                Localization.LoadAndSelect(language);
-                GameManager.Instance.SetupGameFont(language);
-            }
-        }
-
-        public void ConfirmLanguage () {
-            Timing.RunCoroutine(C_ConfirmLanguage());
-        }
-
-        private IEnumerator<float> C_ConfirmLanguage () {
-            languageOptionTween.PlayForward();
-            yield return Timing.WaitForSeconds(languageOptionTween.duration);
-            Helpers.Callback(OnLanguageConfirmed);
-        }
-
-        //public bool isTest = false;
-        //void Update() {
-        //    if (isTest) {
-        //        isTest = false;
-        //        lbMessage.alpha = 1;
-        //        TweenAlpha.Begin(lbMessage.cachedGameObject, 0.5f, 0);
-        //    }
-        //}
-
         public void ShowMessage(string message) {
             //print("Showing message: " + message);
             lbMessage.text = message;
@@ -140,15 +102,7 @@ namespace Mio.TileMaster {
             lbMessage.alpha = 1;
             TweenAlpha.Begin(lbMessage.cachedGameObject, durationFadeOut, 0);
         }
-
-        public void ShowRetryButton() {
-            //print("Showing retry button");
-            retryButton.cachedGameObject.SetActive(true);
-            retryButton.alpha = 0;
-            loadingAnimation.gameObject.SetActive(false);
-            TweenAlpha.Begin(retryButton.cachedGameObject, durationFadeIn, 1);
-        }
-
+        
         public void HideRetryButton() {
             //print("Hiding retry button");
             retryButton.alpha = 1;
