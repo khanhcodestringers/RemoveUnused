@@ -39,8 +39,16 @@ namespace Mio.TileMaster {
 
         private bool[] gamestepInitialized;
 
-        void Start()
+        protected bool _IsInitializing = false;
+        public bool Initted = false;
+
+        public System.Action<GameInitializer> OnInitCompleted = null;
+        public void InitAllGameData()
         {
+            if (_IsInitializing || Initted)
+                return;
+            _IsInitializing = true;
+
             DG.Tweening.DOTween.Init();
             MessageBus.Instance.Initialize();
             //splashScreen.OnLanguageConfirmed += OnLanguageConfirmed;
@@ -52,38 +60,19 @@ namespace Mio.TileMaster {
             //Timing.Instance.TimeBetweenSlowUpdateCalls = 1;
             //currentState = InitializeState.GameStarted;
             GameManager.Instance.Initialize();
-            SceneManager.Instance.Initialize();
+            //SceneManager.Instance.Initialize();
             //GeoLocationManager.Instance.Initialize();
             MidiPlayer.Instance.Initialize();
             MidiPlayer.Instance.ShouldPlay = true;
 
-            OnLanguageConfirmed();
-        }
-
-        private void ShowLanguageConfirmation()
-        {
-            return;
-            
-            string systemLanguage = (Application.systemLanguage.ToString());
-            for (int i = 0; i < SUPPORTED_LANGUAGES.Length; i++)
-            {
-                if (systemLanguage.Contains(SUPPORTED_LANGUAGES[i]))
-                {
-                    splashScreen.ShowLanguageOptions(systemLanguage);
-                    return;
-                }
-            }
-
-            splashScreen.ShowLanguageOptions("English");
-        }
-
-        private void OnLanguageConfirmed()
-        {
-            //Debug.Log("Game is starting...");
-            splashScreen.ShowLoading();
             InitializeGame();
         }
-
+        
+        void Start()
+        {
+            InitAllGameData();
+        }
+        
 
 
         /// <summary>
@@ -104,10 +93,7 @@ namespace Mio.TileMaster {
             //make that bitch calculates its id
             string nothing = GameManager.Instance.DeviceID;
         }
-
-        /// <summary>
-        /// Initialize each step of the game correctly
-        /// </summary>
+        
         private IEnumerator<float> C_InitializeGameSteps()
         {
             // initialize game version first
@@ -163,10 +149,6 @@ namespace Mio.TileMaster {
                 PrepareGameState();
             }
         }
-
-        /// <summary>
-        /// The sequence to wait and start game as necessary
-        /// </summary>
         private IEnumerator<float> C_EnterGameWhenReady()
         {
             int i, count;
@@ -207,13 +189,15 @@ namespace Mio.TileMaster {
             }
 
             // splashScreen.EnterGame();
-            SSSceneManager.Instance.LoadMenu(Scenes.MainMenu.GetName());
-            SceneManager.Instance.OpenScene(Scenes.HomeUI);
-        }
+            // SSSceneManager.Instance.LoadMenu(Scenes.MainMenu.GetName());
+            //SSSceneManager.Instance.LoadMenu(Scenes.SongList.GetName());
+            //SceneManager.Instance.OpenScene(Scenes.MainMenu);
 
-        /// <summary>
-        /// Download and check local version of all download-able config files to see if there are anything need updated
-        /// </summary>
+
+            Initted = true;
+            OnInitCompleted?.Invoke(this);
+            // SSSceneManager.Instance.LoadMenu(Scenes.SongList.GetName());
+        }
         IEnumerator<float> C_InitializeGameVersions()
         {
             //print("Initializing version");
@@ -232,17 +216,6 @@ namespace Mio.TileMaster {
             //Timing.RunCoroutine(C_InitializeGameConfig());
         }
 
-        private void OnGameVersionRefreshFailed(string errorMessage)
-        {
-            return;
-            Debug.LogError("Error downloading game version data: " + errorMessage);
-            splashScreen.ShowMessage(Localization.Get("er_download_version_failed"));
-            splashScreen.ShowRetryButton();
-        }
-
-        /// <summary>
-        /// Prepare latest available game config for this game
-        /// </summary>
         IEnumerator<float> C_InitializeGameConfig()
         {
             //load old game config first 
@@ -361,9 +334,6 @@ namespace Mio.TileMaster {
         }
 
 
-        /// <summary>
-        /// Prepare latest available store data for this game
-        /// </summary>
         IEnumerator<float> C_InitializeStoreData()
         {
             GameManager.Instance.LoadStoreDataFromLocal();
@@ -376,49 +346,8 @@ namespace Mio.TileMaster {
 
             gamestepInitialized[(int)InitializeState.GameStoreData] = true;
         }
+        
 
-
-        private void OnStoreDataRefreshFailed(string errorMessage)
-        {
-            Debug.LogError("Error downloading store data " + errorMessage);
-            return;
-            splashScreen.ShowMessage(Localization.Get("er_download_storedata_failed"));
-            splashScreen.ShowRetryButton();
-        }
-
-        private void InitializePushNotificationService()
-        {
-//            if (string.IsNullOrEmpty(GameManager.Instance.GameConfigs.onesignal_app_id))
-//            {
-//                Debug.LogError("Missing onesignal_app_id for Onesignal Init");
-//                return;
-//            }
-//#if UNITY_IOS
-//			OneSignal.Init(GameManager.Instance.GameConfigs.onesignal_app_id, null);
-//#else
-//            // set up for android 
-//            if (string.IsNullOrEmpty(GameManager.Instance.GameConfigs.google_project_id))
-//            {
-//                Debug.LogError("Missing google_project_id for Onesignal Init");
-//                return;
-//            }
-//            OneSignal.Init(GameManager.Instance.GameConfigs.onesignal_app_id, GameManager.Instance.GameConfigs.google_project_id);
-//#endif
-
-        }
-
-        private void InitializeIAPService()
-        {
-#if !UNITY_EDITOR
-#if UNITY_IOS || UNITY_ANDROID
-            IAPManager.Instance.Initialize();
-#endif
-#endif
-        }
-
-        /// <summary>
-        /// Button retry clicked
-        /// </summary>
         public void RetryLastInitialization()
         {
             splashScreen.HideMessage();

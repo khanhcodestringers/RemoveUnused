@@ -147,12 +147,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97022568}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1338216455}
-  m_RootOrder: 2
+  m_Father: {fileID: 1330231806}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &97022570
 MonoBehaviour:
@@ -192,12 +192,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168468096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1338216455}
-  m_RootOrder: 0
+  m_Father: {fileID: 1330231806}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &168468098
 MonoBehaviour:
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 1330231804}
   - component: {fileID: 1330231807}
   - component: {fileID: 1330231808}
+  - component: {fileID: 1330231809}
   m_Layer: 0
   m_Name: ScenesManager
   m_TagString: Untagged
@@ -406,6 +407,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1338216455}
+  - {fileID: 168468097}
+  - {fileID: 1760834138}
+  - {fileID: 97022569}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -429,6 +433,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41dcb6b4c6bf84246a9557ceb3909e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1330231809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330231803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ab662268ec9ec4abf9ca8e62a6a38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1338216454
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +455,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1338216455}
   - component: {fileID: 1338216456}
-  - component: {fileID: 1338216457}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -457,10 +472,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 168468097}
-  - {fileID: 1760834138}
-  - {fileID: 97022569}
+  m_Children: []
   m_Father: {fileID: 1330231806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -483,18 +495,6 @@ MonoBehaviour:
   koreanFont: {fileID: 0}
   configURL: https://s3.amazonaws.com/pianochallenge2/pc201/PC_Config_Nov1.txt
   gameVersionURL: https://s3.amazonaws.com/pianochallenge2/pc201/PC_Version_Nov1.txt
---- !u!114 &1338216457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338216454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ab662268ec9ec4abf9ca8e62a6a38e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1760834137
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,12 +519,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760834137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1338216455}
-  m_RootOrder: 1
+  m_Father: {fileID: 1330231806}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1760834139
 MonoBehaviour:

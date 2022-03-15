@@ -787,6 +787,9 @@ public class SSSceneManager : MonoBehaviour
 
 	protected void SetCameras(GameObject sc, float i)
 	{
+		if (sc == null)
+			return;
+		Debug.LogError((sc.transform.name));
         SSController ssControl = sc.GetComponent<SSController>();
         if (!ssControl.ShouldChangeCanvasOrder) { return; }
         //print("Setting camera's setting in " + sc.name + " i=" + i);

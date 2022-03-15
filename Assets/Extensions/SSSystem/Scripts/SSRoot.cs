@@ -68,7 +68,7 @@ public class SSRoot : MonoBehaviour
                 cam.clearFlags = CameraClearFlags.Depth;
             }
 
-            //print("Calling onload for gameobject: " + gameObject.name);
+            print("Calling onload for gameobject: " + gameObject.name);
             SSApplication.OnLoaded(gameObject);
         }
 	}

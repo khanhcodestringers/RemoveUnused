@@ -57,23 +57,43 @@ namespace Mio.TileMaster {
             }
         }
 
-        public override void OnEnable () {
+        protected void InitLevelLoader()
+        {
             levelLoader.OnSongParsed -= OnSongParsed;
             levelLoader.OnSongParsed += OnSongParsed;
             levelLoader.OnDownloadSongError -= OnSongDownloadError;
             levelLoader.OnDownloadSongError += OnSongDownloadError;
             levelLoader.OnDownloadSongProgress -= OnSongDownloading;
             levelLoader.OnDownloadSongProgress += OnSongDownloading;
+        }
 
+        protected void InitGameLogicController()
+        {
             gamelogic.OnGameOver -= OnGameOver;
             gamelogic.OnGameOver += OnGameOver;
+        }
+        
+        public void InitController()
+        {
+            InitLevelLoader();
+            
+            InitGameLogicController();
+        }
 
+        public void SetupGameStart()
+        {
+            InitController();
+            
             ChangeState(UIState.Initialized);
             //SceneManager.Instance.SetMenuVisible(false);
             levelLoader.gameObject.SetActive(true);
 
             LoadLevel();
             Timing.RunCoroutine(DisableGameObjects(0.1f));
+        }
+        
+        public override void OnEnable () {
+            
         }
 
         /// <summary>
@@ -182,6 +202,10 @@ namespace Mio.TileMaster {
         }
 
         private void OnGameOver () {
+            
+            Debug.LogError("EndGame");
+            return;
+            
             if (!gamelogic.isListenThisSong && gamelogic.CanContinue()) {
                 SceneManager.Instance.OpenPopup(ProjectConstants.Scenes.ContinuePopup, this);
             }
