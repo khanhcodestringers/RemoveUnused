@@ -553,11 +553,11 @@ namespace Mio.TileMaster {
             PrepareSpeedTableNotes();
 
             //hide all record view
-            if (recordviewCrowns.gameObject.activeInHierarchy) {
+            if (recordviewCrowns && recordviewCrowns.gameObject.activeInHierarchy) {
                 recordviewCrowns.ShowNumRecord(0);
                 recordviewCrowns.SetVisible(false);
             }
-            if (recordviewStars.gameObject.activeInHierarchy) {
+            if (recordviewStars && recordviewStars.gameObject.activeInHierarchy) {
                 recordviewStars.ShowNumRecord(0);
                 recordviewStars.SetVisible(false);
             }

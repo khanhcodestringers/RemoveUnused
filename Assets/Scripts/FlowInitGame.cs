@@ -70,9 +70,8 @@ public class FlowInitGame : MonoBehaviour
         InitLevelLoader();
         InitGameLogicController();
     }
-    private void OnGameOver () {
-            
-        Debug.LogError("EndGame");
+    private void OnGameOver () 
+    {
         return;
     }
     
@@ -83,22 +82,23 @@ public class FlowInitGame : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.K))
-        {
-            StartGame();
-            // gamelogic.StartGame();
-        }
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            gamelogic.isListenThisSong = !gamelogic.isListenThisSong;
-            gamelogic.StartGame();
-        }
+        // if (Input.GetKeyUp(KeyCode.K))
+        // {
+        //     StartGame();
+        //     // gamelogic.StartGame();
+        // }
+        //
+        // if (Input.GetKeyUp(KeyCode.A))
+        // {
+        //     gamelogic.isListenThisSong = !gamelogic.isListenThisSong;
+        //     gamelogic.StartGame();
+        // }
         
     }
 
     public void InitFlow()
     {
+        _GameInitializer.OnInitCompleted = initializer => StartGame();
         _GameInitializer.InitAllGameData();   
     }
 

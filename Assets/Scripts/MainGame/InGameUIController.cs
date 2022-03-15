@@ -293,7 +293,7 @@ public class InGameUIController : MonoSingleton<InGameUIController> {
 
     public void OnProcessInputControl () {
 		if(!canTouch) return;
-#if UNITY_EDITOR // in editor simulation one touch
+#if UNITY_WEBGL || UNITY_EDITOR // in editor simulation one touch
 
         TouchCover touch = null;
         if (!dicTouchCover.TryGetValue(0, out touch))

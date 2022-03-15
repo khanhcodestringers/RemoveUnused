@@ -84,6 +84,7 @@ namespace Mio.TileMaster {
             //Debug.Log("Initializing game...");
             //Timing.RunCoroutine(C_InitializeGameVersions());
 
+            Debug.Log("InitializedGame");
             Timing.RunCoroutine(C_InitializeGameSteps());
             //start coroutine checking the game and enter if all steps have been initialized
             Timing.RunCoroutine(C_EnterGameWhenReady());
@@ -103,6 +104,7 @@ namespace Mio.TileMaster {
             while (gamestepInitialized[stepGameVersion] != true)
             {
                 yield return Timing.WaitForSeconds(0.3f);
+                gamestepInitialized[stepGameVersion] = true;
             }
 
             //initialize game configs
@@ -110,10 +112,12 @@ namespace Mio.TileMaster {
             if (gamestepInitialized[stepGameConfig] != true)
             {
                 Timing.RunCoroutine(C_InitializeGameConfig());
+                gamestepInitialized[stepGameConfig] = true;
             }
             while (gamestepInitialized[stepGameConfig] != true)
             {
                 yield return Timing.WaitForSeconds(0.3f);
+                gamestepInitialized[stepGameConfig] = true;
             }
 
             //initialize steps that can be run parallel
@@ -121,6 +125,7 @@ namespace Mio.TileMaster {
             if (gamestepInitialized[stepStoreData] != true)
             {
                 Timing.RunCoroutine(C_InitializeStoreData());
+                gamestepInitialized[stepStoreData] = true;
             }
 
             int stepAchievement = (int)InitializeState.AchievementData;
@@ -133,19 +138,24 @@ namespace Mio.TileMaster {
             if (gamestepInitialized[stepUserData] != true)
             {
                 Timing.RunCoroutine(C_InitializeUserData());
+                gamestepInitialized[stepUserData] = true;
             }
 
             int stepLocalization = (int)InitializeState.GameLocalization;
             if (gamestepInitialized[stepLocalization] != true)
             {
                 Timing.RunCoroutine(C_InitializeGameLocalization());
+                gamestepInitialized[stepLocalization] = true;
             }
 
             int stepGameState = (int)InitializeState.GameStates;
             if (gamestepInitialized[stepGameState] != true)
             {
                 PrepareGameState();
+                gamestepInitialized[stepGameState] = true;
             }
+            
+            Debug.Log("Init Config");
         }
         private IEnumerator<float> C_EnterGameWhenReady()
         {
@@ -174,27 +184,14 @@ namespace Mio.TileMaster {
                 yield return Timing.WaitForSeconds(0.3f);
             }
 
-            //restore achievement data here after the player profile has been initialized
-            if (!string.IsNullOrEmpty(ProfileHelper.Instance.AchievementPropertiesCSV)
-                && !string.IsNullOrEmpty(ProfileHelper.Instance.AchievementUnlockedAndClaimedCSV))
-            {
-                // AchievementHelper.Instance.RestoreAchievementDataFromDump(ProfileHelper.Instance.AchievementPropertiesCSV, ProfileHelper.Instance.AchievementUnlockedAndClaimedCSV);
-            }
-
             while (!MidiPlayer.Instance.IsInitialized)
             {
                 yield return Timing.WaitForSeconds(0.2f);
             }
-
-            // splashScreen.EnterGame();
-            // SSSceneManager.Instance.LoadMenu(Scenes.MainMenu.GetName());
-            //SSSceneManager.Instance.LoadMenu(Scenes.SongList.GetName());
-            //SceneManager.Instance.OpenScene(Scenes.MainMenu);
-
-
+            
             Initted = true;
+
             OnInitCompleted?.Invoke(this);
-            // SSSceneManager.Instance.LoadMenu(Scenes.SongList.GetName());
         }
         IEnumerator<float> C_InitializeGameVersions()
         {
