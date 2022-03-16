@@ -21,6 +21,7 @@ public class FlowInitGame : MonoBehaviour
     protected void ChooseSong(int indexSong)
     {
         LevelDataModel level = new LevelDataModel();
+        indexSong = Math.Min(indexSong, _GameManager.StoreData.listAllSongs.Count - 1);
         level.songData = _GameManager.StoreData.listAllSongs[indexSong];
         GameManager.Instance.SessionData.currentLevel = level;
         levelData = GameManager.Instance.SessionData.currentLevel;
@@ -30,8 +31,9 @@ public class FlowInitGame : MonoBehaviour
     public void StartGame()
     {
         // _MainGameSceneController.gameObject.SetActive(true);
+        this.IndexSong = Math.Min(IndexSong, _GameManager.StoreData.listAllSongs.Count - 1);
         ChooseSong(this.IndexSong);
-
+        
         InitController();
         
         if (gamelogic.CachedLevelData == null || !gamelogic.CachedLevelData.songData.name.Equals(levelData.songData.name)) 
@@ -82,18 +84,18 @@ public class FlowInitGame : MonoBehaviour
 
     private void Update()
     {
-        // if (Input.GetKeyUp(KeyCode.K))
-        // {
-        //     StartGame();
-        //     // gamelogic.StartGame();
-        // }
-        //
-        // if (Input.GetKeyUp(KeyCode.A))
-        // {
-        //     gamelogic.isListenThisSong = !gamelogic.isListenThisSong;
-        //     gamelogic.StartGame();
-        // }
-        
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            // StartGame();
+            gamelogic.StartGame();
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            gamelogic.isListenThisSong = !gamelogic.isListenThisSong;
+            gamelogic.StartGame();
+        }
+
     }
 
     public void InitFlow()

@@ -65,8 +65,8 @@ public class NoteSimple : MonoBehaviour {
                 addY += 200;
                 colliderX = speedRatio < MAX_COLLIDER_EXPAND ? speedRatio * BASE_COLLIDER_WIDTH : BASE_COLLIDER_WIDTH * MAX_COLLIDER_EXPAND;
             }
-            box.size = new Vector2(colliderX, 480 + addY);
-            box.offset = colliderOffset + new Vector2(0, addY * 0.25f);
+            //box.size = new Vector2(colliderX, 480 + addY);
+            //box.offset = colliderOffset + new Vector2(0, addY * 0.25f);
 
             this.height = 480;
             this.isClickable = true;
@@ -97,6 +97,16 @@ public class NoteSimple : MonoBehaviour {
         isSyncToServer = false;
 
     }
+
+    protected virtual void Execute()
+    {
+        //play appropriate sound
+        MidiPlayer.Instance.PlayPianoNotes(data.notes, InGameUIController.Instance.gameplay.GetSpeedRatio(), true, data.soundDelay);
+        InGameUIController.Instance.gameplay.IncreaseAndShowScore();
+        InGameUIController.Instance.gameplay.TileFinished();
+        // AchievementHelper.Instance.LogAchievement("totalNoteHit");
+        EffectWhenFinish();
+    }
 	public virtual void Press(TouchCover _touchCover){
 		this.touchCover = _touchCover;
 		if (!isClickable) {
@@ -104,12 +114,8 @@ public class NoteSimple : MonoBehaviour {
 		}
         isClickable = false;
 		isFinish = true;
-		//play appropriate sound
-		MidiPlayer.Instance.PlayPianoNotes(data.notes, InGameUIController.Instance.gameplay.GetSpeedRatio(), true, data.soundDelay);
-		InGameUIController.Instance.gameplay.IncreaseAndShowScore ();
-        InGameUIController.Instance.gameplay.TileFinished();
-        // AchievementHelper.Instance.LogAchievement("totalNoteHit");
-		EffectWhenFinish ();
+
+        Execute();
 	}
 	public virtual void OnKeepTouch(){
 		

@@ -94,8 +94,8 @@ public class NoteMulti : NoteSimple {
             addY += 100;
             colliderX = speedRatio < MAX_COLLIDER_EXPAND ? speedRatio * BASE_COLLIDER_WIDTH : BASE_COLLIDER_WIDTH * MAX_COLLIDER_EXPAND;
         }
-        box.size = new Vector2(colliderX, 700 + addY);
-        box.offset = colliderOffset + new Vector2(0, addY * 0.25f);
+        //box.size = new Vector2(colliderX, 700 + addY);
+        //box.offset = colliderOffset + new Vector2(0, addY * 0.25f);
 
         Vector3 scale = sprite.transform.localScale;
         scale.y = (int)(_height / 4.80f);
